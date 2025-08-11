@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced AI Diagram Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <div class="header">
+            <h1>Diagram Annotator</h1>
+            <p>Upload an image for AI generated analysis, highlighting, and an auto-generated quiz.</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="apiKey">Your Google AI API Key</label>
+                <input type="password" id="apiKey" placeholder="Enter your Gemini API key">
+            </div>
+            <div class="control-group">
+                <label for="imageLoader">Upload Diagram</label>
+                <input type="file" id="imageLoader" accept="image/png, image/jpeg">
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="analyzeBtn" class="button">Analyze with AI</button>
+        </div>
+
+        <div id="results-container">
+            <div id="diagram-container">
+                <div id="loader" class="loader" style="display: none;"></div>
+                <span id="placeholderText">Your analyzed diagram will appear here.</span>
+                <img id="diagram-image" />
+                <svg id="overlay-svg"></svg>
+            </div>
+            <div id="summary-container" class="info-box" style="display:none;">
+                <h2>AI Summary</h2>
+                <p id="summary-text"></p>
+            </div>
+            <div id="quiz-container" class="info-box" style="display:none;">
+                <h2>Test Your Knowledge</h2>
+                <div id="quiz-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
