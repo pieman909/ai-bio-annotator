@@ -1,8 +1,4 @@
-Of course. A great README is essential for any project. Based on our entire journey building this application, here is a complete `README.md` file.
 
-You can copy and paste this content directly into your `README.md` file.
-
----
 
 # ai-bio-annotator
 
